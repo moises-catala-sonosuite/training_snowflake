@@ -1,0 +1,25 @@
+models:
+  - name: dim_hosts_cleansed
+    description: Hosts Dimension cleaned, showing Anonymous when host name is empty.
+    columns:
+      - name: HOST_ID
+        description: Id of host
+        data_type: NUMBER
+        tests:
+          - not_null
+      - name: HOST_NAME
+        description: '{{ doc("dim_host_cleased__host_name") }}'  
+        data_type: VARCHAR
+      - name: IS_SUPERHOST
+        description: Boolean showing if host is superhost
+        data_type: VARCHAR
+      - name: CREATED_AT
+        description: Creation Timestamp of host
+        data_type: TIMESTAMP_NTZ
+        tests:
+          - not_null
+      - name: UPDATED_AT
+        description: Update Timestamp of host
+        data_type: TIMESTAMP_NTZ
+        tests:
+          - not_null

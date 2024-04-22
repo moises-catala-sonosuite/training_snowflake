@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "training-snowflake"
+version = "0.1.0"
+description = ""
+authors = ["Moises Catala <moises.catala@lacupulamusic.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11"
+dbt-snowflake = "1.7.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
